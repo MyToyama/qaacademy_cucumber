@@ -4,6 +4,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.PesquisaPages;
@@ -23,7 +24,7 @@ public class PesquisaStep {
     public void pesquisa_por(String palavraDaPesquisa) {
         pesquisaPage = new PesquisaPages();
         driver.findElement(By.id(pesquisaPage.barraDePesquisa)).sendKeys(palavraDaPesquisa);
-        driver.findElement(By.id(pesquisaPage.barraDePesquisa)).sendKeys(keys.ENTER);
+        driver.findElement(By.id(pesquisaPage.barraDePesquisa)).sendKeys(Keys.ENTER);
 
     }
     @Então("retoma um link relacionado a pesquisas")
